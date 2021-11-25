@@ -18,10 +18,11 @@ def write_n_words(filename: str, num: int) -> None:
             x.write(word + "\n")
 
 
-def generate(length=randint(3, 9)) -> str:
+def generate(length=0) -> str:
     """Returns one generated ikea word."""
     word = ''
     data = Data()
+    length = randint(3, 9) if length == 0 else length
     for _ in range(length):
         letter = data.get_letter(length, word)
         word += letter
