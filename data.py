@@ -5,7 +5,7 @@ import json
 with open("alphabet.json", encoding='utf-8') as file:
     ALPHABET = json.load(file, object_hook=lambda x: {a: float(b) * 100 for a, b in x.items()})
 
-with open("bigram.json") as file:
+with open("bigram.json", encoding='utf-8') as file:
     BIGRAMS = json.load(file, object_hook=lambda x: {a: float(b) * 100 for a, b in x.items()})
 
 with open("trigram.json", encoding='utf-8') as file:
